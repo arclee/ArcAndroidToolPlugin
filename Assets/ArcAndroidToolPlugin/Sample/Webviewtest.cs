@@ -26,16 +26,16 @@ public class Webviewtest : MonoBehaviour {
 	
 	void OnGUI ()
 	{
-
+		
 		if (GUI.Button(new Rect (0, 100, 100, 100), "Size 0"))
 		{
 			scale.x = 1;
 			scale.y = 1;
-
+			
 			arcAndroidWebView.Instance.SetSizeScale(scale.x, scale.y);
 			arcAndroidWebView.Instance.ShowURL(url);
 		}
-
+		
 		
 		if (GUI.Button(new Rect (0, 200, 100, 100), "Size 1"))
 		{
@@ -53,12 +53,17 @@ public class Webviewtest : MonoBehaviour {
 			arcAndroidWebView.Instance.ShowURL(url);
 		}
 		
-		if (GUI.Button(new Rect (0, 400, 100, 100), "Size 2"))
+		if (GUI.Button(new Rect (0, 400, 100, 100), "Size 3"))
 		{
 			scale.x = 2.0f;
 			scale.y = 2.0f;
 			arcAndroidWebView.Instance.SetSizeScale(scale.x, scale.y);
 			arcAndroidWebView.Instance.ShowURL(url);
+		}
+		
+		if (GUI.Button(new Rect (0, 500, 100, 100), "close"))
+		{
+			arcAndroidWebView.Instance.CloseURL();
 		}
 	}
 }

@@ -4,7 +4,7 @@ _Copyright (c) 2014 Arclee
 加入了 Android Webview 功能.
 
 # 說明
-可在 Unity 遊戲中直接插入一個 Andoird WebView
+可在 Unity 遊戲中直接插入一個 Andoird WebView, 點擊左上的 x 圖示可關閉 WebView.
 
 
 # 導入方法

@@ -1,10 +1,13 @@
 # ArcAndroidToolPlugin for Unity
 _Copyright (c) 2014 Arclee
 
-加入了 Android Webview 功能.
+加入了 Android Webview 功能. 只能在 Android 上執行.
 
 # 說明
-可在 Unity 遊戲中直接插入一個 Andoird WebView, 點擊左上的 x 圖示可關閉 WebView.
+* 可在 Unity 遊戲中直接插入一個 Andoird WebView.
+* 點擊左上的 x 圖示可關閉 WebView.
+* 在 WebView 顯示時, 後方的遊戲的點擊(touch)一樣有效, 所以使用者要在顯示 WebView 時, 自己要在遊戲中做 MASK 把點擊給擋下來.
+
 
 
 # 導入方法

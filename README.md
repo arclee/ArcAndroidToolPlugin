@@ -2,10 +2,25 @@
 _Copyright (c) 2014 Arclee
 
 加入了 Android Webview 功能. 只能在 Android 上執行.
+![Alt text](Assets/ArcAndroidToolPlugin/Sample/ScreenShot/Screenshot_2014-10-11-17-23-57.png?raw=true "使用前")
+(使用前)
+
+![Alt text](Assets/ArcAndroidToolPlugin/Sample/ScreenShot/Screenshot_2014-10-11-17-24-10.png?raw=true "全畫面網頁")
+(全畫面網頁)
+
+![Alt text](Assets/ArcAndroidToolPlugin/Sample/ScreenShot/Screenshot_2014-10-11-17-24-22.png?raw=true "90%大小網頁")
+(90%大小網頁)
+
+![Alt text](Assets/ArcAndroidToolPlugin/Sample/ScreenShot/Screenshot_2014-10-11-17-24-44.png?raw=true "自動轉向")
+(自動轉向)
+
+![Alt text](Assets/ArcAndroidToolPlugin/Sample/ScreenShot/Screenshot_2014-10-11-17-25-35.png?raw=true "可輸入文字")
+(可輸入文字)
 
 # 說明
 * 可在 Unity 遊戲中直接插入一個 Andoird WebView.
 * 點擊左上的 x 圖示可關閉 WebView.
+* 按手機的 back 鍵可回上一頁.
 * 在 WebView 顯示時, 若後方的遊戲的點擊(touch)有效, 使用者要在顯示 WebView 時, 自己要在遊戲中做 MASK 把點擊給擋下來.
 
 
@@ -81,6 +96,9 @@ arcAndroidWebView.Instance.CloseURL();
 ```
 * 正常關閉網頁
 按左上角的 x 圖示即可.
+
+![Alt text](Assets/ArcAndroidToolPlugin/Sample/ScreenShot/Screenshot_2014-10-11-17-24-22.png?raw=true "點左上角的 x 關閉")
+
 * 接收網頁關閉事件
 ```c#
 

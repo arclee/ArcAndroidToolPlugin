@@ -81,7 +81,7 @@ _Copyright (c) 2014 Arclee
 # Sample 
 請看 Assets\ArcAndroidToolPlugin\Sample\sample.unity
 * 一定要先建在 Scene 裡建立一個 GameObject, 加入 arcAndroidWebView.cs 這個 Component.
-* 設定顯示縮放大小 (實作可參考 Webviewtest.cs)
+* 設定顯示縮放大小 (以下的實作可參考 Webviewtest.cs)
 ```c#
 // 大小在 0 ~ 1 之間.
 arcAndroidWebView.Instance.SetSizeScale(0.9f, 0.9f);

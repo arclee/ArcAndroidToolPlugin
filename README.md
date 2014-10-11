@@ -6,7 +6,7 @@ _Copyright (c) 2014 Arclee
 # 說明
 * 可在 Unity 遊戲中直接插入一個 Andoird WebView.
 * 點擊左上的 x 圖示可關閉 WebView.
-* 在 WebView 顯示時, 後方的遊戲的點擊(touch)一樣有效, 所以使用者要在顯示 WebView 時, 自己要在遊戲中做 MASK 把點擊給擋下來.
+* 在 WebView 顯示時, 若後方的遊戲的點擊(touch)有效, 使用者要在顯示 WebView 時, 自己要在遊戲中做 MASK 把點擊給擋下來.
 
 
 
@@ -14,7 +14,7 @@ _Copyright (c) 2014 Arclee
 * 安裝 ArcAndroidToolPlugin.unitypackage
 * 如果您的專案裡沒有 AndroidManifest.xml :
 
-copy
+複製
 ```bat
   \Assets\Plugins\Android\ArcAndroidToolPlugin\AndroidManifest.xml
 ```
@@ -65,7 +65,7 @@ copy
 
 # Sample 
 請看 Assets\ArcAndroidToolPlugin\Sample\sample.unity
-* 在 Scene 建立一個 GameObject, 加入 arcAndroidWebView.cs 這個 Component.
+* 一定要先建在 Scene 裡建立一個 GameObject, 加入 arcAndroidWebView.cs 這個 Component.
 * 設定顯示大小
 ```c#
 // 大小在 0 ~ 1 之間.
@@ -81,3 +81,26 @@ arcAndroidWebView.Instance.CloseURL();
 ```
 * 正常關閉網頁
 按左上角的 x 圖示即可.
+* 接收網頁關閉事件
+```c#
+
+	void OnEnable()
+	{
+		//接收網頁關閉事件..
+		arcAndroidWebView.onCloseURLEvent += onCloseURL;
+	}
+
+	void OnDisable()
+	{
+		//移除接收網頁關閉事件..
+		arcAndroidWebView.onCloseURLEvent -= onCloseURL;
+
+	}
+	
+	void onCloseURL()
+	{
+		//網頁關閉時要要做什麼事, 都寫在這裡...
+		Debug.Log("Webviewtest onCloseURL");
+	}
+```
+

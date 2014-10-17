@@ -110,6 +110,18 @@ public class arcAndroidWebView : MonoBehaviour {
 #endif
 	}
 	
+	public void SetInteralKeyword(string val)
+	{
+#if UNITY_ANDROID
+		if (Jo != null)
+		{	
+			Jo.Call("SetInteralKeyword", val);
+		}
+#endif
+	}
+
+
+
 	// Update is called once per frame
 	void Update ()
 	{

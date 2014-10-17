@@ -5,6 +5,7 @@ public class Webviewtest : MonoBehaviour {
 
 	//要連去的網站..
 	public string url;
+	public string internalKeyword;
 	// Use this for initialization
 	void Start ()
 	{
@@ -40,6 +41,8 @@ public class Webviewtest : MonoBehaviour {
 		//不同大小的網頁..
 		if (GUI.Button(new Rect (0, 100, 100, 100), "Size 0"))
 		{
+			//設定網站包含關鍵字時, 就留在原webview, 否則另開應用程式.
+			arcAndroidWebView.Instance.SetInteralKeyword(internalKeyword);
 			//設縮放大小..
 			arcAndroidWebView.Instance.SetSizeScale(1.0f, 1.0f);
 			//顯示網頁...

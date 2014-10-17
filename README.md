@@ -21,6 +21,7 @@ _Copyright (c) 2014 Arclee
 * 可在 Unity 遊戲中直接插入一個 Andoird WebView.
 * 點擊左上的 x 圖示可關閉 WebView.
 * 按手機的 back 鍵可回上一頁.
+* 可設定內部網址關鍵字, 若網址包含該關鍵字則會留在 Unity webview 裡, 否則會另外開一個應用程式來瀏覽網址.
 * 在 WebView 顯示時, 若後方的遊戲的點擊(touch)有效, 使用者要在顯示 WebView 時, 自己要在遊戲中做 MASK 把點擊給擋下來.
 
 
@@ -85,6 +86,13 @@ _Copyright (c) 2014 Arclee
 ```c#
 // 大小在 0 ~ 1 之間.
 arcAndroidWebView.Instance.SetSizeScale(0.9f, 0.9f);
+```
+* * 可設定內部網址關鍵字, 設定空字串為永遠留在 Unity 裡.
+```c#
+//例1:http://m.gamer.com.tw/forum/  的網址留在 Unity 裡顯示.
+arcAndroidWebView.Instance.SetInteralKeyword("http://m.gamer.com.tw/forum/");
+//例2:不論什麼網址, 都留在 Unity 裡顯示.
+arcAndroidWebView.Instance.SetInteralKeyword("");
 ```
 * 顯示網頁
 ```c#

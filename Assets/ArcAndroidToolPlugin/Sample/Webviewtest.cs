@@ -52,6 +52,7 @@ public class Webviewtest : MonoBehaviour {
 		
 		if (GUI.Button(new Rect (0, 200, 100, 100), "Size 1"))
 		{
+			arcAndroidWebView.Instance.SetInteralKeyword(internalKeyword);
 			arcAndroidWebView.Instance.SetSizeScale(0.9f, 0.9f);
 			arcAndroidWebView.Instance.ShowURL(url);
 		}

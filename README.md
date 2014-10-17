@@ -87,7 +87,7 @@ _Copyright (c) 2014 Arclee
 // 大小在 0 ~ 1 之間.
 arcAndroidWebView.Instance.SetSizeScale(0.9f, 0.9f);
 ```
-* * 可設定內部網址關鍵字, 設定空字串為永遠留在 Unity 裡.
+* 可設定內部網址關鍵字, 設定空字串為永遠留在 Unity 裡.
 ```c#
 //例1:http://m.gamer.com.tw/forum/  的網址留在 Unity 裡顯示.
 arcAndroidWebView.Instance.SetInteralKeyword("http://m.gamer.com.tw/forum/");

@@ -120,6 +120,16 @@ public class arcAndroidWebView : MonoBehaviour {
 #endif
 	}
 
+	
+	public void SetCloseBtnBaseSize(float size)
+	{
+		#if UNITY_ANDROID
+		if (Jo != null)
+		{	
+			Jo.Call("SetCloseBtnBaseSize", size);
+		}
+		#endif
+	}
 
 
 	// Update is called once per frame
